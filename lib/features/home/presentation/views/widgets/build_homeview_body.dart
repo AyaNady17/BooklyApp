@@ -1,6 +1,7 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/presentation/views/widgets/bestseller_listview_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/fearured_list_view.dart';
@@ -21,6 +22,7 @@ class BuildHomeViewBody extends StatelessWidget {
           height: 50,
         ),
         bestSellerTitle(),
+        const BestSellerListViewItem()
       ],
     );
   }
