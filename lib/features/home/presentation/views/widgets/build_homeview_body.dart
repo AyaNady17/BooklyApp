@@ -32,7 +32,7 @@ class BuildHomeViewBody extends StatelessWidget {
       padding: EdgeInsets.only(left: 16),
       child: Text(
         "Best Seller",
-        style: Styles.MeduimTitle,
+        style: Styles.textStyle18,
       ),
     );
   }

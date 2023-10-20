@@ -1,4 +1,6 @@
 import 'package:bookly/constants.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/fearured_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
@@ -10,14 +12,7 @@ class BestSellerListViewItem extends StatelessWidget {
       children: [
         SizedBox(
           height: 125,
-          child: AspectRatio(
-            aspectRatio: 2.6 / 4,
-            child: Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
-                  image: DecorationImage(image: AssetImage(ktestImage))),
-            ),
-          ),
+          child: CustomListViewItem(aspectRatio: 2.6 / 4, borderRadius: 10),
         )
       ],
     );
