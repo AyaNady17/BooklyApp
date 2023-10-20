@@ -1,6 +1,7 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/presentation/views/widgets/bestseller_listview.dart';
 import 'package:bookly/features/home/presentation/views/widgets/bestseller_listview_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_list_view_item.dart';
@@ -13,16 +14,22 @@ class BuildHomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const CustomAppBar(),
-        const FeaturedListView(),
-        const SizedBox(
-          height: 50,
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(child: CustomAppBar()),
+        const SliverToBoxAdapter(child: FeaturedListView()),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 35,
+          ),
         ),
-        bestSellerTitle(),
-        const BestSellerListViewItem()
+        SliverToBoxAdapter(child: bestSellerTitle()),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 20,
+          ),
+        ),
+        const BestSellerListView(),
       ],
     );
   }
