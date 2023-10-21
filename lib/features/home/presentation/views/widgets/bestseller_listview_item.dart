@@ -1,6 +1,6 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
-import 'package:bookly/features/home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly/features/home/presentation/views/widgets/fearured_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -26,7 +26,7 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
             const SizedBox(
               height: 125,
-              child: CustomListViewItem(aspectRatio: 2.6 / 4, borderRadius: 10),
+              child: CustomBookImage(aspectRatio: 2.6 / 4, borderRadius: 10),
             ),
             const SizedBox(
               width: 25,

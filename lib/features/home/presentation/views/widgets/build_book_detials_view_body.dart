@@ -1,4 +1,7 @@
 import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
+import 'package:bookly/features/home/presentation/views/widgets/fearured_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -7,38 +10,14 @@ class BuildBookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        DetailsViewAppBar(),
+        const DetailsViewAppBar(),
+        SizedBox(
+            width: MediaQuery.of(context).size.width * 0.55,
+            child:
+                const CustomBookImage(aspectRatio: 2.8 / 4, borderRadius: 24)),
       ],
-    );
-  }
-}
-
-class DetailsViewAppBar extends StatelessWidget {
-  const DetailsViewAppBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 24, right: 24, top: 55, bottom: 16),
-      child: Row(
-        children: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.close,
-                size: 26,
-              )),
-          const Spacer(),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.shopping_cart_outlined,
-                size: 26,
-              ))
-        ],
-      ),
     );
   }
 }
