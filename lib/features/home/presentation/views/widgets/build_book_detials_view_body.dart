@@ -28,14 +28,14 @@ class DetailsViewAppBar extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(
                 Icons.close,
-                size: 24,
+                size: 26,
               )),
           const Spacer(),
           IconButton(
               onPressed: () {},
               icon: const Icon(
-                FontAwesomeIcons.cartShopping,
-                size: 24,
+                Icons.shopping_cart_outlined,
+                size: 26,
               ))
         ],
       ),
