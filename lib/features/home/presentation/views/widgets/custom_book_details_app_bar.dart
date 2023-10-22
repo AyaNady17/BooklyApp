@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DetailsViewAppBar extends StatelessWidget {
   const DetailsViewAppBar({super.key});
@@ -10,7 +11,9 @@ class DetailsViewAppBar extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
               icon: const Icon(
                 Icons.close,
                 size: 26,

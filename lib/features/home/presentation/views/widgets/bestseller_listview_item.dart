@@ -63,7 +63,9 @@ class BestSellerListViewItem extends StatelessWidget {
                         style: Styles.textStyle20
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
-                      const BookRating(),
+                      BookRating(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                      ),
                     ],
                   )
                 ],
@@ -77,11 +79,12 @@ class BestSellerListViewItem extends StatelessWidget {
 }
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
-
+  BookRating({super.key, required this.mainAxisAlignment});
+  MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         const Icon(
           FontAwesomeIcons.solidStar,
@@ -99,7 +102,7 @@ class BookRating extends StatelessWidget {
           width: 4.5,
         ),
         Text(
-          "(2023)",
+          "(223)",
           style: Styles.textStyle14.copyWith(color: Colors.grey),
         ),
       ],
