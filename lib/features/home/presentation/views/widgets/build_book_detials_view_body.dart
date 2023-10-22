@@ -23,7 +23,7 @@ class BuildBookDetailsViewBody extends StatelessWidget {
             children: [
               const DetailsViewAppBar(),
               SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.48,
+                  width: MediaQuery.of(context).size.width * 0.45,
                   child: const CustomBookImage(
                       aspectRatio: 2.8 / 4, borderRadius: 24)),
               const BookDescribtion(),
@@ -36,8 +36,8 @@ class BuildBookDetailsViewBody extends StatelessWidget {
               const BookActions(),
               const Expanded(
                 child: SizedBox(
-                  height: 25,
-                ),
+                    // height: MediaQuery.of(context).size.height * 0.7,
+                    ),
               ),
               const SuggestedList(),
             ],
