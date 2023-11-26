@@ -10,13 +10,13 @@ sealed class FeaturedBooksState extends Equatable {
 final class FeaturedBooksInitial extends FeaturedBooksState {}
 
 final class FeaturedBooksSuccess extends FeaturedBooksState {
-  List<BookModel> featuredBooks;
-  FeaturedBooksSuccess({required this.featuredBooks});
+  final List<BookModel> featuredBooks;
+  const FeaturedBooksSuccess({required this.featuredBooks});
 }
 
 final class FeaturedBooksLoading extends FeaturedBooksState {}
 
 final class FeaturedBooksFailure extends FeaturedBooksState {
-  String errMsg;
-  FeaturedBooksFailure({required this.errMsg});
+  final String errMsg;
+  const FeaturedBooksFailure({required this.errMsg});
 }
