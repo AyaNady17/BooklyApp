@@ -87,6 +87,7 @@ class SearchedListViewItem extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class BookRating extends StatelessWidget {
   BookRating({super.key, required this.mainAxisAlignment});
   MainAxisAlignment mainAxisAlignment;

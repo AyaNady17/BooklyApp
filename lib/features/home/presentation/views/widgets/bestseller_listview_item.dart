@@ -1,7 +1,5 @@
-import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
-import 'package:bookly/features/home/presentation/views/widgets/fearured_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -78,6 +76,7 @@ class BestSellerListViewItem extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class BookRating extends StatelessWidget {
   BookRating({super.key, required this.mainAxisAlignment});
   MainAxisAlignment mainAxisAlignment;
