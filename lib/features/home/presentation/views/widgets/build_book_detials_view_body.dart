@@ -21,7 +21,10 @@ class BuildBookDetailsViewBody extends StatelessWidget {
               SizedBox(
                   width: MediaQuery.of(context).size.width * 0.45,
                   child: const CustomBookImage(
-                      aspectRatio: 2.8 / 4, borderRadius: 24)),
+                      bookImage:
+                          ' blob:https://www.kobo.com/3bdf7a57-0022-4058-9af8-7ad486ea8d8f',
+                      aspectRatio: 2.8 / 4,
+                      borderRadius: 24)),
               const BookDescribtion(),
               BookRating(
                 mainAxisAlignment: MainAxisAlignment.center,

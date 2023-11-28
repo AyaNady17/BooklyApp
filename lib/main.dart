@@ -8,9 +8,11 @@ import 'package:bookly/features/home/presentation/view_modals/FeaturedBooksCubit
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  setupLocator();
   runApp(const BooklyApp());
 }
 
@@ -23,7 +25,8 @@ class BooklyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FeaturedBooksCubit(getIt.get<HomeRepoImplemetion>()),
+              FeaturedBooksCubit(getIt.get<HomeRepoImplemetion>())
+                ..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) =>

@@ -4,9 +4,13 @@ import 'package:go_router/go_router.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage(
-      {super.key, required this.aspectRatio, required this.borderRadius});
+      {super.key,
+      required this.aspectRatio,
+      required this.borderRadius,
+      required this.bookImage});
   final double aspectRatio;
   final double borderRadius;
+  final String bookImage;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +23,7 @@ class CustomBookImage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
-              image: const DecorationImage(image: AssetImage(ktestImage))),
+              image: DecorationImage(image: NetworkImage(bookImage))),
         ),
       ),
     );
