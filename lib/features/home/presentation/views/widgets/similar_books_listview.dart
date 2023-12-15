@@ -15,7 +15,7 @@ class SimilarBooksListView extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 4),
               child: CustomBookImage(
                 bookImage:
-                    'blob:https://www.kobo.com/3bdf7a57-0022-4058-9af8-7ad486ea8d8f',
+                    'https://lumiere-a.akamaihd.net/v1/images/p_thejunglebook1967_19869_f10b5016.jpeg?region=0%2C0%2C540%2C810',
                 borderRadius: 18,
                 aspectRatio: 2.5 / 4,
               ),
