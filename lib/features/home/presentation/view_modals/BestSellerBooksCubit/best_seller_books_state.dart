@@ -10,7 +10,7 @@ sealed class BestSellerBooksState extends Equatable {
 final class BestSellerBooksInitial extends BestSellerBooksState {}
 
 final class BestSellerBooksSuccess extends BestSellerBooksState {
-  final List<BookModel> bestSellerBooks;
+  final List<dynamic> bestSellerBooks;
   const BestSellerBooksSuccess({required this.bestSellerBooks});
 }
 
