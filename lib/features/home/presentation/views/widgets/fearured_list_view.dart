@@ -23,7 +23,8 @@ class FeaturedListView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 4),
                     child: CustomBookImage(
                       bookImage: state.featuredBooks[index].volumeInfo
-                          .imageLinks.smallThumbnail,
+                              .imageLinks?.smallThumbnail ??
+                          'https://www.stxnext.com/hs-fs/hubfs/STX%20Next%202020/blog/images/Python-Programming-for-Beginners-cover.jpg',
                       borderRadius: 18,
                       aspectRatio: 2.8 / 4,
                     ),

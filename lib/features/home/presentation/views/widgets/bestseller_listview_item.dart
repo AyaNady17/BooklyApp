@@ -28,7 +28,8 @@ class BestSellerListViewItem extends StatelessWidget {
               child: CustomBookImage(
                 aspectRatio: 2.6 / 4,
                 borderRadius: 10,
-                bookImage: bookModel.volumeInfo.imageLinks.thumbnail,
+                bookImage: bookModel.volumeInfo.imageLinks?.thumbnail ??
+                    'https://www.stxnext.com/hs-fs/hubfs/STX%20Next%202020/blog/images/Python-Programming-for-Beginners-cover.jpg',
               ),
             ),
             const SizedBox(
@@ -53,6 +54,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   ),
                   Text(
                     bookModel.volumeInfo.authors![0],
+                    overflow: TextOverflow.ellipsis,
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
